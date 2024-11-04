@@ -6,6 +6,23 @@
     <title>Rosebud</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>
+
 <body>
     <header>
     <div class="logo-container">
@@ -16,6 +33,7 @@
         <a href="aboutUs.html">About Us</a>
         <a href="productandServices.html">Products</a>
         <a href="contact.html">Contact</a>
+        <a href="news.html">News</a>
     </nav>
 </header>
         <div class="content">

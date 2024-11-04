@@ -102,4 +102,14 @@ footer {
     padding: 10px;
     background-color: #ddd;
 }
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+    .content {
+        padding: 10px;
+    }
+}
+
 
